@@ -1,0 +1,23 @@
+{
+  "name": "notes-to-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turn PDF study notes into explainer videos.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch-path=server.js --watch-path=src server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@glitchoff/kino": "^1.4.0",
+    "ajv": "^8.17.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^2.5.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

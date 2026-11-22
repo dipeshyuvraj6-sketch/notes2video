@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1115">
+  <title>Notes-to-Video</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="card">
+    <header class="card-header">
+      <div class="logo" aria-hidden="true">▶</div>
+      <h1>Notes-to-Video</h1>
+      <p class="subtitle">Turn your PDF study notes into an explainer video.</p>
+    </header>
+
+    <section aria-label="Upload study notes">
+      <div id="dropZone" class="drop-zone" tabindex="0" role="button" aria-label="Choose or drop a PDF">
+        <span class="upload-icon" aria-hidden="true">↑</span>
+        <p class="drop-text">Click to select or drag a PDF file here</p>
+        <p class="drop-hint">PDF only · Up to 10 MB</p>
+        <input type="file" id="fileInput" accept="application/pdf,.pdf" hidden>
+      </div>
+      <div id="fileInfo" class="file-info hidden">
+        <span id="fileName" class="file-name"></span>
+        <span id="fileSize" class="file-size"></span>
+        <button id="removeFile" class="remove-file" type="button" aria-label="Remove selected file">×</button>
+      </div>
+    </section>
+
+    <button id="generateBtn" class="generate-btn" type="button" disabled>
+      <span class="btn-text">Generate Video</span>
+      <span class="btn-spinner hidden" aria-hidden="true"></span>
+    </button>
+    <div id="status" class="status hidden" aria-live="polite" role="status"></div>
+    <section id="videoContainer" class="video-container hidden" aria-label="Generated video">
+      <video id="videoPlayer" controls playsinline></video>
+      <a id="downloadLink" class="download-link" href="#" download>Download MP4</a>
+      <button id="resetBtn" class="reset-btn" type="button">Upload Another</button>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
