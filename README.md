@@ -2,6 +2,8 @@
 
 A single-page app that converts text-based PDF study notes into MP4 explainer videos:
 
+For a detailed architecture overview, configuration reference, setup guide, and AI-agent runbook, see [PROJECT_REPORT.md](./PROJECT_REPORT.md).
+
 1. Upload a PDF.
 2. Extract and clean its text.
 3. Ask Google Gemini for a structured scene script.
